@@ -1,15 +1,19 @@
 import React, { useState } from 'react';
 import * as S from './styled';
+import { useHistory} from 'react-router-dom';
 
 function Home() {
     const [email, setEmail] = useState('');
-    const [erro, setError] = useState(false);
+    const [erro, setErro] = useState(false);
+    const history = useHistory();
 
     function verification(){
         if(email.includes("@")){
-            setError(false)
+            localStorage.setItem('email',JSON.stringify(email))
+            setErro(false)
+            history.push('./register')
         }else{
-            setError(true)
+            setErro(true)
         }       
     }
 
