@@ -1,8 +1,11 @@
 
+import Routes from "./router";
+  
 function App() {
+
   return (
     <>
-      <h1>Inicio do App</h1>
+         <Routes/>
     </>
   );
 }
