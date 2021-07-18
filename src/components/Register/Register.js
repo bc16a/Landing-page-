@@ -8,6 +8,7 @@ export default function Register() {
     const [lastName, setLastName] = useState('');
     const [telephone, setTelephone] = useState(Number);
 
+
     const history = useHistory();
     useEffect(() => {
 
@@ -24,9 +25,8 @@ export default function Register() {
 
     function saveData() {
         let datas = localStorage.getItem('datas');
-        
-        if (datas != null) {
 
+        if (datas != null) {
             datas = JSON.parse(datas)
             let data = {
                 name: name,
@@ -35,9 +35,10 @@ export default function Register() {
                 telephone: telephone
             }
             datas.push(data);
-            localStorage.setItem('datas', JSON.stringify(datas)) 
-        }else{ 
-            datas=[]
+            localStorage.setItem('datas', JSON.stringify(datas))
+
+        } else {
+            datas = []
             let data = {
                 name: name,
                 lastName: lastName,
@@ -45,8 +46,10 @@ export default function Register() {
                 telephone: telephone
             }
             datas.push(data);
-            localStorage.setItem('datas', JSON.stringify(datas)) 
-        } 
+            localStorage.setItem('datas', JSON.stringify(datas))
+        }
+
+        history.push('./')
     }
 
     return (
