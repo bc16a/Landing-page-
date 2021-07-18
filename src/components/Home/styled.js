@@ -15,8 +15,6 @@ export const Content = styled.div`
     justify-content: center;
 `;
 
-
-
 export const Input = styled.input`
     border: 1px solid #ddd;
     height: 1.5rem;
