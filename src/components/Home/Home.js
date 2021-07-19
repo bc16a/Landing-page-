@@ -21,7 +21,7 @@ function Home() {
         <S.HomeContainer>
             <S.Content>
                 <S.Input className="emailInput" placeholder="email" value={email} onChange={e => setEmail(e.target.value)} />
-                < S.button type="button" onClick={verification}> Enviar </S.button >
+                < S.Button type="button" onClick={verification}> Enviar </S.Button>
             </S.Content>
             { erro ? 
         <S.ErrorMsg>Esse email digitado não é válido, tente Novamente</S.ErrorMsg> : ''

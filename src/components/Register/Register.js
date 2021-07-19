@@ -18,9 +18,7 @@ export default function Register() {
             email = JSON.parse(email);
             setEmail(email);
         }
-        else {
-            history.push('./')
-        }
+      
     }, []);
 
     function saveData() {
